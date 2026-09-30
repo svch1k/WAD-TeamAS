@@ -7,50 +7,48 @@ a {
   color: black;
 }
 
-.nav-home-button {
-  font-size: 2vw;
-  padding: 2vh 3vw;
-
-  border-radius: 1vw;
-}
-
 .nav-account-button {
   display: flex;
   justify-content: center;
-  padding: 0.2vw;
+  padding: 4px;
 }
 
 .nav-account-button > svg {
-  width: 5vw;
+  width: 32px;
   height: auto;
 }
 
 .navbar {
   align-items: center;
   background-color: gray;
-  border-radius: 1vw;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
-  padding: 5vh;
+  padding: 16px 24px;
 }
 
 main {
-  margin: 5vh auto 0 auto;
+  margin: 32px auto 0 auto;
   background-color: gray;
-  width: 30%;
+  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  border-radius: 2vw;
+  border-radius: 16px;
 }
+
 main button {
   margin: 0;
 }
+
 main p {
   font-weight: 500;
-  font-size: 4.5vh;
-  margin: 0.3vh;
+  font-size: 22px;
+  margin: 4px;
+}
+
+.welcome-label {
+  padding-top: 24px;
 }
 
 .create-account-button,
@@ -58,10 +56,11 @@ main p {
   background-color: #00000000;
   border: 0;
   color: rgb(2, 116, 116);
-  font-size: 4vh;
+  font-size: 14px;
 }
+
 .forgert-password-button {
-  padding: 0 0 4vh 0;
+  padding: 0 0 16px 0;
 }
 
 form {
@@ -71,21 +70,40 @@ form {
 }
 
 form * {
-  margin: 0.3vh 0;
+  margin: 4px 0;
 }
 
 form input {
-  width: 10vw;
-  height: 5vh;
+  width: 200px;
+  height: 38px;
 }
 
 .submit-button {
-  margin: 4vh 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 20px 0;
   background-color: blue;
   color: white;
   border: none;
-  width: 7vw;
-
+  width: 120px;
+  height: 36px;
+  border-radius: 6px;
   text-align: center;
-  padding: 3px 3px;
+}
+
+input + input {
+  margin-top: 8px;
+}
+
+input ~ button {
+  cursor: pointer;
+}
+
+.nav-home-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.4s;
 }
