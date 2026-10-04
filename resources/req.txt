@@ -1,0 +1,8 @@
+Team: AS
+
+Team Members:
+- Kostiantyn Iliushchenko
+- Savva Novikov
+
+GitHub Repository: https://github.com/svch1k/WADHW1
+GitHub Pages: SAVA CHANGE THIS LINE AFTER DEPLOYMENT
