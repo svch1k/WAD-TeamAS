@@ -5,4 +5,4 @@ Team Members:
 - Savva Novikov
 
 GitHub Repository: https://github.com/svch1k/WADHW1
-GitHub Pages: SAVA CHANGE THIS LINE AFTER DEPLOYMENT
+GitHub Pages: https://svch1k.github.io/WAD-TeamAS/html/index.html
