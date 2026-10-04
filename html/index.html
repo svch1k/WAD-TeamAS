@@ -1,68 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">    
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> My Website </title>
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
-  <div class="page">
-    <header class="site-header">
-      <nav aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a>
-        <span aria-hidden="true">|</span>
-        <a href="addPost.html">Add Post</a>
-      </nav>
-      <a href="login.html" aria-label="Log in"><img class="avatar" src="../assets/avatar.svg" alt=""></a>
-    </header>
-    <main class="home-layout">
-      <div class="side-panel" aria-hidden="true"></div>
-      <section class="feed" aria-label="Recent posts">
-        <h1>Recent posts</h1>
-        <article class="post" aria-label="A walk in the park">
-          <header class="post-header">
-            <img class="avatar" src="../assets/avatar.svg" alt="User avatar">
-            <time datetime="2026-09-30">Sep 30, 2026</time>
-          </header>
-          <img class="post image" src="../assets/park.jpg" alt="Illustration of an walk in the park">
-          <p> Look at this view, it is beautiful! </p>
-        </article>
-        <article class="post" aria-label="Dog">
-          <header class="post-header">
-            <img class="avatar" src="../assets/avatar.svg" alt="User avatar">
-            <time datetime="2026-09-30">Sep 30, 2026</time>
-          </header>
-          <img class="post image" src="../assets/dog.jpg" alt="Illustration of an dog">          
-          <p> My beautiful dog. </p>
-        </article>
-        <article class="post" aria-label="Question">
-          <header class="post-header">
-            <img class="avatar" src="../assets/avatar.svg" alt="User avatar">
-            <time datetime="2026-09-30">Sep 30, 2026</time>
-          </header>
-          <p> Hey there! </p>
-        </article>
-        <article class="post" aria-label="Course sign-up">
-          <header class="post-header">
-            <img class="avatar" src="../assets/avatar.svg" alt="User avatar">
-            <time datetime="2026-09-30">Sep 30, 2026</time>
-          </header>
-          <p> Today is the last day to sign up to new courses! </p>
-        </article>
-        <article class="post" aria-label="Party question">
-          <header class="post-header">
-            <img class="avatar" src="../assets/avatar.svg" alt="User avatar">
-            <time datetime="2026-09-30">Sep 30, 2026</time>
-          </header>
-          <p> Does anybody know how to get to the party? </p>
-          <span class="like" role="img" aria-label="Like">❤️</span>
-        </article>
-        </section>
-        <div class="side-panel" aria-hidden="true"></div>
-        </main>
-    <footer class = "site-footer">Footer</footer>
-      </div>
-    </body>
+
+<body class="page">
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <span aria-hidden="true">|</span>
+      <a href="addPost.html">Add Post</a>
+    </nav>
+    <a href="login.html" aria-label="Log in"><img class="avatar" src="../assets/avatar.svg" alt="" /></a>
+  </header>
+
+  <main class="home-layout">
+    <div class="side-panel" aria-hidden="true"></div>
+
+    <section class="feed" aria-label="Recent posts">
+      <h1>Recent posts</h1>
+      <article class="post" aria-label="A walk in the park">
+        <header class="post-header">
+          <img class="avatar" src="../assets/avatar.svg" alt="User avatar" />
+          <time datetime="2026-09-30">Sep 30, 2026</time>
+        </header>
+        <img class="post image" src="../assets/park.jpg" alt="Illustration of an walk in the park" />
+        <p>Look at this view, it is beautiful!</p>
+      </article>
+      <article class="post" aria-label="Dog">
+        <header class="post-header">
+          <img class="avatar" src="../assets/avatar.svg" alt="User avatar" />
+          <time datetime="2026-09-30">Sep 30, 2026</time>
+        </header>
+        <img class="post image" src="../assets/dog.jpg" alt="Illustration of an dog" />
+        <p>My beautiful dog.</p>
+      </article>
+      <article class="post" aria-label="Question">
+        <header class="post-header">
+          <img class="avatar" src="../assets/avatar.svg" alt="User avatar" />
+          <time datetime="2026-09-30">Sep 30, 2026</time>
+        </header>
+        <p>Hey there!</p>
+      </article>
+      <article class="post" aria-label="Course sign-up">
+        <header class="post-header">
+          <img class="avatar" src="../assets/avatar.svg" alt="User avatar" />
+          <time datetime="2026-09-30">Sep 30, 2026</time>
+        </header>
+        <p>Today is the last day to sign up to new courses!</p>
+      </article>
+      <article class="post" aria-label="Party question">
+        <header class="post-header">
+          <img class="avatar" src="../assets/avatar.svg" alt="User avatar" />
+          <time datetime="2026-09-30">Sep 30, 2026</time>
+        </header>
+        <p>Does anybody know how to get to the party?</p>
+        <span class="like" role="img" aria-label="Like">❤️</span>
+      </article>
+    </section>
+    <div class="side-panel" aria-hidden="true"></div>
+  </main>
+  <footer class="site-footer">Footer</footer>
+</body>
+
 </html>
