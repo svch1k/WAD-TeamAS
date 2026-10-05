@@ -90,26 +90,19 @@ a:focus-visible {
   font-size: 13px;
 }
 
-.post-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 4px;
-}
-
 .feed {
   min-width: 0;
 }
 
-.post .post-image {
+.post > .post-image {
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
   margin: 10px 0 0;
+  padding: 0;
+  border-radius: 4px;
 }
-
 .post > p {
   line-height: 1.5;
   margin: 10px 0;
