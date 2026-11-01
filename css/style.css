@@ -114,6 +114,10 @@ a:focus-visible {
 
 .like {
   font-size: 22px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .site-footer {
