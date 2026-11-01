@@ -1,0 +1,262 @@
+/* Task 8: overall styling of the page.
+   This file is loaded after style.css / login.css / addPost.css, so it refines
+   the existing look without changing the layout of those files:
+   typography, cards, spacing, focus states, buttons, forms and footer. */
+
+:root {
+  --page-radius: 12px;
+  --card-radius: 12px;
+  --surface: #d9d9d9;
+  --surface-dark: #bfbfbf;
+  --text: #14181d;
+  --text-muted: #4b5158;
+  --accent: #24568b;
+  --accent-hover: #1c456f;
+  --shadow-sm: 0 1px 2px rgba(20, 24, 29, 0.1);
+  --shadow-md: 0 8px 20px rgba(20, 24, 29, 0.14);
+}
+
+body {
+  font-family:
+    "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* visible keyboard focus everywhere, not only on links */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  padding: 10px 14px;
+  border-radius: var(--page-radius);
+  background-color: var(--surface-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+nav a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #3a4046;
+  font-weight: 500;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+}
+
+/* ---------- feed ---------- */
+
+.feed h1 {
+  margin: 0 0 14px;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+
+.post {
+  padding: 14px 16px;
+  border-radius: var(--card-radius);
+  background-color: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.post:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.post + .post {
+  margin-top: 18px;
+}
+
+.post time {
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.post > p {
+  margin: 12px 0 10px;
+  color: var(--text);
+}
+
+.post > .post-image {
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* the like button gets a real button shape instead of only an emoji */
+.like {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 34px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.like:hover {
+  background-color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.like:active {
+  transform: scale(0.94);
+}
+
+.side-panel {
+  border-radius: var(--page-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- footer ---------- */
+
+footer,
+.site-footer {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: var(--page-radius);
+  background-color: var(--surface-dark);
+  color: var(--text-muted);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ---------- forms on the login and add post pages ---------- */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--text);
+  background-color: #ffffff;
+  border: 1px solid #b9bec4;
+  border-radius: 8px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input:not([type="file"]) {
+  padding: 0 12px;
+}
+
+textarea,
+select {
+  padding: 9px 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6b7076;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(36, 86, 139, 0.25);
+}
+
+.submit-button,
+.create-post-button {
+  background-color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.12s ease;
+}
+
+.submit-button:hover,
+.create-post-button:hover {
+  background-color: var(--accent-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.submit-button:active,
+.create-post-button:active {
+  transform: translateY(1px);
+}
+
+.create-account-button,
+.forgert-password-button {
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.create-account-button:hover,
+.forgert-password-button:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 8px 10px;
+  }
+
+  nav a {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+  .post {
+    padding: 12px;
+  }
+
+  .feed h1 {
+    font-size: 20px;
+  }
+
+  footer,
+  .site-footer {
+    margin-top: 14px;
+    padding: 12px;
+  }
+}
+
+/* respect the system setting for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

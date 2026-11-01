@@ -7,6 +7,8 @@
   <title>My Website</title>
   <link rel="stylesheet" href="../css/normalize.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/userMenu.css" />
+  <link rel="stylesheet" href="../css/theme.css" />
 </head>
 
 <body class="page">
@@ -16,7 +18,20 @@
       <span aria-hidden="true">|</span>
       <a href="addPost.html">Add Post</a>
     </nav>
-    <a href="login.html" aria-label="Log in"><img class="avatar" src="../assets/avatar.svg" alt="" /></a>
+
+    <!-- Task 7: clicking the personal photo opens the user menu -->
+    <div class="user-menu">
+      <button type="button" class="user-menu-toggle" id="userMenuToggle" aria-haspopup="true" aria-expanded="false"
+        aria-controls="userMenu" aria-label="Open user menu">
+        <img class="avatar" src="../assets/avatar.svg" alt="" />
+      </button>
+
+      <div class="user-menu-list" id="userMenu" hidden>
+        <p class="user-menu-name">John Doe</p>
+        <a class="user-menu-email" href="mailto:john.doe@ut.ee">john.doe@ut.ee</a>
+        <a class="user-menu-logout" href="login.html">logout</a>
+      </div>
+    </div>
   </header>
 
   <main class="home-layout">
@@ -30,6 +45,7 @@
   </main>
   <footer class="site-footer">Footer</footer>
   <script src="../js/main.js"></script>
+  <script src="../js/userMenu.js"></script>
 </body>
 
 </html>
