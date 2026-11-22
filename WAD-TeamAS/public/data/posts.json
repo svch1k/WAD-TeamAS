@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "author": { "name": "John Doe", "email": "john.doe@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-10-30T14:25:00Z",
+    "body": "Look at this view, it is beautiful!",
+    "image": "images/park.jpg",
+    "imageAlt": "A walk in the park",
+    "likes": 12
+  },
+  {
+    "id": 2,
+    "author": { "name": "Mari Tamm", "email": "mari.tamm@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-10-28T09:10:00Z",
+    "body": "Anyone knows in which room is the lab today?",
+    "image": null,
+    "imageAlt": null,
+    "likes": 3
+  },
+  {
+    "id": 3,
+    "author": { "name": "Kostiantyn Iliushchenko", "email": "kostiantyn.iliushchenko@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-10-25T18:45:00Z",
+    "body": "My beautiful dog.",
+    "image": "images/dog.jpg",
+    "imageAlt": "A dog",
+    "likes": 27
+  },
+  {
+    "id": 4,
+    "author": { "name": "Savva Novikov", "email": "savva.novikov@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-10-22T11:00:00Z",
+    "body": "Tartu 2024 was a great year for the city!",
+    "image": null,
+    "imageAlt": null,
+    "likes": 8
+  },
+  {
+    "id": 5,
+    "author": { "name": "Liis Kask", "email": "liis.kask@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-10-18T16:30:00Z",
+    "body": "Does anybody know how to get to the party?",
+    "image": null,
+    "imageAlt": null,
+    "likes": 5
+  },
+  {
+    "id": 6,
+    "author": { "name": "John Doe", "email": "john.doe@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-10-15T08:05:00Z",
+    "body": "Morning walk before the lecture. The park is so quiet at this time.",
+    "image": "images/park.jpg",
+    "imageAlt": "Quiet park in the morning",
+    "likes": 15
+  },
+  {
+    "id": 7,
+    "author": { "name": "Mari Tamm", "email": "mari.tamm@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-10-10T20:15:00Z",
+    "body": "Is the WAD homework deadline on Sunday or Monday?",
+    "image": null,
+    "imageAlt": null,
+    "likes": 9
+  },
+  {
+    "id": 8,
+    "author": { "name": "Karl Saar", "email": "karl.saar@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-10-02T13:40:00Z",
+    "body": "Meet my new best friend!",
+    "image": "images/dog.jpg",
+    "imageAlt": "A happy dog",
+    "likes": 31
+  },
+  {
+    "id": 9,
+    "author": { "name": "Liis Kask", "email": "liis.kask@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-09-21T10:00:00Z",
+    "body": "Hey there!",
+    "image": null,
+    "imageAlt": null,
+    "likes": 1
+  },
+  {
+    "id": 10,
+    "author": { "name": "Karl Saar", "email": "karl.saar@ut.ee", "avatar": "images/avatar.svg" },
+    "createTime": "2026-09-16T07:55:00Z",
+    "body": "Today is the last day to sign up to new courses!",
+    "image": null,
+    "imageAlt": null,
+    "likes": 4
+  }
+]
