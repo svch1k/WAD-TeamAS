@@ -12,12 +12,8 @@ const hasSubmitted = ref(false);
 
 const passwordRules = [
   {
-    label: "Must be at least 8 characters long",
-    test: (value) => value.length >= 8,
-  },
-  {
-    label: "Must be shorter than 15 characters",
-    test: (value) => value.length < 15,
+    label: "Is between 8 and 14 characters long",
+    test: (value) => value.length >= 8 && value.length < 15,
   },
   {
     label: "Includes at least one uppercase letter",
@@ -90,7 +86,6 @@ function onSubmit() {
           v-model="password"
           type="password"
           placeholder="Password"
-          required
         />
       </div>
 
