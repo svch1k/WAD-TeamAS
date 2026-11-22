@@ -1,8 +1,10 @@
 <script setup>
 import { computed, ref } from "vue";
 import { useRouter } from "vue-router";
+import { useStore } from "vuex";
 
 const router = useRouter();
+const store = useStore();
 
 const email = ref("");
 const password = ref("");
@@ -62,6 +64,7 @@ function onSubmit() {
     return;
   }
 
+  store.dispatch("login", email.value);
   router.push({ name: "home" });
 }
 </script>

@@ -1,6 +1,13 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
+import { useStore } from "vuex";
 import AvatarLogo from "./AvatarLogo.vue";
+
+const store = useStore();
+const router = useRouter();
+
+const user = computed(() => store.getters.currentUser);
 
 const isOpen = ref(false);
 const menuRoot = ref(null);
@@ -12,6 +19,12 @@ function toggleMenu() {
 
 function closeMenu() {
   isOpen.value = false;
+}
+
+function logout() {
+  closeMenu();
+  store.dispatch("logout");
+  router.push({ name: "home" });
 }
 
 function onDocumentClick(event) {
@@ -58,13 +71,16 @@ onBeforeUnmount(() => {
     </button>
 
     <div v-show="isOpen" id="userMenu" class="user-menu-list">
-      <p class="user-menu-name">John Doe</p>
-      <a class="user-menu-email" href="mailto:john.doe@ut.ee" @click="closeMenu"
-        >john.doe@ut.ee</a
+      <p class="user-menu-name">{{ user?.name }}</p>
+      <a
+        class="user-menu-email"
+        :href="`mailto:${user?.email}`"
+        @click="closeMenu"
+        >{{ user?.email }}</a
       >
-      <RouterLink class="user-menu-logout" to="/signup" @click="closeMenu"
-        >logout</RouterLink
-      >
+      <button type="button" class="user-menu-logout" @click="logout">
+        logout
+      </button>
     </div>
   </div>
 </template>
