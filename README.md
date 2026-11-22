@@ -44,9 +44,11 @@ page reload.
    an uppercase letter and must contain `_`. While typing (and on submit) the
    form shows `the password is not valid - <rules that are not satisfied>`.
    A valid password returns to the feed.
-7. **Styling** — the ported stylesheets in `src/css/` are imported once in
-   `src/main.js` in the old cascade order
-   (`normalize → style → userMenu → signup → addPost → theme`).
+7. **Styling** — every component keeps its own CSS in a `<style scoped>` block
+   at the bottom of its `.vue` file. Global styles (CSS variables, `body`,
+   form controls) live in an unscoped `<style>` block in `App.vue`. The only
+   separate stylesheet is `src/css/normalize.css`, imported first in
+   `src/main.js`.
 
 ## Project structure
 
@@ -56,7 +58,7 @@ public/
   images/                avatar and post images
 src/
   components/            AppHeader, AppFooter, UserMenu, AvatarLogo, PostCard
-  css/                   normalize + ported stylesheets
+  css/normalize.css      the only global stylesheet (other CSS is in .vue files)
   router/index.js        routes and legacy redirects
   store/index.js         Vuex store: posts, loading state, likes
   views/                 HomeView, SignupView, AddPostView
