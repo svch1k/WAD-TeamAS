@@ -9,6 +9,9 @@ export default createStore({
     // idle | loading | loaded | error
     status: "idle",
     error: "",
+    // authentication state (not persisted on purpose)
+    isLoggedIn: false,
+    user: null,
   }),
 
   // slice
@@ -20,6 +23,10 @@ export default createStore({
 
     likesOf: (state) => (id) =>
       state.posts.find((post) => post.id === id)?.likes ?? 0,
+
+    isLoggedIn: (state) => state.isLoggedIn,
+
+    currentUser: (state) => state.user,
 
     totalLikes: (state) =>
       state.posts.reduce((sum, post) => sum + post.likes, 0),
@@ -45,6 +52,11 @@ export default createStore({
       if (post) {
         post.likes += 1;
       }
+    },
+
+    setUser(state, user) {
+      state.user = user;
+      state.isLoggedIn = user !== null;
     },
 
     resetLikes(state) {
@@ -84,6 +96,16 @@ export default createStore({
 
     resetAllLikes({ commit }) {
       commit("resetLikes");
+    },
+
+    login({ commit }, email) {
+      const name = email.split("@")[0];
+
+      commit("setUser", { name, email });
+    },
+
+    logout({ commit }) {
+      commit("setUser", null);
     },
   },
 });
